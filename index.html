@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Module-11</title>
+</head>
+<body id="body">
+	<table>
+		<thead>
+			<tr>
+				<th id="id">ID</th>
+				<th id="name">Name</th>
+				<th id="age">Age</th>
+			</tr>
+		</thead>
+		<tbody id="js-tbody"></tbody>
+	</table>
+
+	<button id="js-btn">Get all users</button>
+
+	<div class="container">
+		<form class="search-form">
+			<input type="text" name="get-user" id="input-ID" placeholder="Enter user ID">
+			<button class="mdc-btn" type="submit" id="js-search-by-ID">Search by ID</button>
+		</form>
+		<p class="result-ID"></p>  
+	</div>
+
+	<div class="container add-user">
+		<form class="search-form">
+
+			<input type="text" name="name" value="" id="newUserName" placeholder="Enter user name">
+			<input type="text" name="age" value="" id="newUserAge" placeholder="Enter user age">
+
+			<button class="add" type="submit" id="js-add-user">Added new user</button>	
+		</form>		  
+	</div>
+
+	<div class="container">
+		<form class="search-form">
+			<input type="text" name="get-user" id="delete-user" placeholder="Enter user ID">
+			<button class="mdc-btn" type="submit" id="js-delete-by-ID">Delete by ID</button>
+		</form>
+	</div>
+
+	<div class="container">
+		<form class="search-form">
+			<input type="text" name="get-user" id="update-user" placeholder="Enter user ID">
+			<input type="text" name="updetetUserName" id="updetetUserName" placeholder="Enter user updetetUserName">
+			<input type="text" name="updetetUserAge" id="updetetUserAge" placeholder="Enter user updetetUserAge">
+			<button class="mdc-btn" type="submit" id="js-update-by-ID">Updata by ID</button>
+		</form>
+	</div>
+
+
+	<script type="text/template" id="all-user">
+		<tr scope="row">
+			<th><%- id%></th>
+			<th><%- name%></th>
+			<th><%- age%></th>
+		</tr>
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
